@@ -11,18 +11,21 @@ pipeline {
 
         stage('Test') {
           steps {
-            echo 'Testing the application'
-          }
-        }
-
-        stage('Deploy') {
-          steps {
-            echo 'Deploying the app in IIS server'
+            echo '\' "Get the DriverPath ${ChromeDriverPath}" \''
           }
         }
 
       }
     }
 
+    stage('Deploy') {
+      steps {
+        echo 'Deploying the app in IIS server'
+      }
+    }
+
+  }
+  environment {
+    ChromeDriverPath = 'E:\\Personal\\1.DevOps_darey\\Apps_installs\\chromedriver_win32\\chromedriver.exe'
   }
 }
