@@ -1,15 +1,15 @@
 pipeline {
    agent {
-       label 'slave'
+       label 'Docker_agent'
    }
-  
-  stages {
-    stage('Hello') {
-      steps {
-              sh 'java -version'
-              echo "Get working directory"
-              sh 'pwd'
-       }
-     }
+
+   stages {
+      stage('Hello') {
+         steps {
+                sh 'java -version'
+                echo "Get working directory"
+                sh 'pwd'
+         }
+      }
    }
 }
