@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage ('SCM'){
             steps {
-                checkout([&class: 'GitSCM', branches: [[name: '*/Develop']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Renatoksh/JenkinsBasicPipeline.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/Develop']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Renatoksh/JenkinsBasicPipeline.git']]])
             }
         }
         stage('Build') {
