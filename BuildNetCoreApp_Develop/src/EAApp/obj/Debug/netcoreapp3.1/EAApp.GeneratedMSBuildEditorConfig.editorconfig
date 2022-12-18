@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = EAApp
+build_property.ProjectDir = e:\Personal\1.DevOps_darey\JenkinsBasicPipeline\JenkinsBasicPipeline\JenkinsNetCore\src\EAApp\
